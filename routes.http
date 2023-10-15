@@ -1,0 +1,47 @@
+POST http://localhost:8080/users/
+Content-Type: application/json
+
+{
+    "name": "Fernanda Sene",
+    "username": "fernandasene",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:8080/users/
+Content-Type: application/json
+
+{
+    "name": "Sabrina Cristina",
+    "username": "sabrinacristina",
+    "password": "1234"
+}
+
+###
+
+POST http://localhost:8080/tasks/
+Content-Type: application/json
+Authorization: Basic fernandasene:1234
+
+{
+    "description": "Teste 1 descrição",
+    "title": "Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo, Teste 1 titulo Teste 1 tituloTeste 1 tituloTeste 1 tituloTeste 1 tituloTeste 1 titulo",
+    "priority": "ALTA",
+    "startAt": "2023-10-16T11:00:00",
+    "endAt": "2023-10-17T11:30:00"
+}
+
+###
+GET http://localhost:8080/tasks/
+Authorization: Basic fernandasene:1234
+
+###
+
+PUT http://localhost:8080/tasks/984c7385-1313-4ce1-b245-0c87223eb495
+Content-Type: application/json
+Authorization: Basic sabrinacristina:1234
+
+{
+    "description": "Calabresa com batata"
+}
